@@ -1,3 +1,5 @@
+"use server"
+
 import { SignJWT, jwtVerify } from "jose";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
@@ -42,6 +44,7 @@ export async function login(formData) {
     cookies().set("session", session, { expires, httpOnly: true });
   }
 }
+
 
 export async function logout() {
   // Destroy the session

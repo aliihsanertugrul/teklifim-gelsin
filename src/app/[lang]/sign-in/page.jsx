@@ -1,28 +1,36 @@
 import { redirect } from "next/navigation";
 import { login } from "@/lib/auth";
 import "./style.scss";
+import {  i18n } from "@/dictionaries/dictionaries";
 
-export default async function SignUp() {
+
+
+export default async function SignUp({ params }) {
+
   return (
     <div className="container signup-form">
       <div className="row justify-content-center ">
         <div className="col-sm-8 col-md-6 col-lg-5 col-xl-4">
           <div className="card signup-form">
             <div className="card-body">
-              <form
+           <form
                 action={async (formData) => {
                   "use server";
                   await login(formData);
-                  redirect("/");
+                  if(i18n.locales.some(locale => locale ===params.lang)){
+                    redirect(`/${params.lang}`);
+                  }else{
+ redirect(`/not-found`);
+                  }
                 }}
               >
                 <div class="mb-3">
-                  <label for="email" class="form-label">
+                  <label htmlFor="email" className="form-label">
                     Email address
                   </label>
                   <input
                     type="email"
-                    class="form-control"
+                    className="form-control"
                     name="email"
                     id="email"
                     placeholder="name@example.com"
@@ -31,12 +39,12 @@ export default async function SignUp() {
                 </div>
 
                 <div class="mb-3">
-                  <label for="password" class="form-label">
+                  <label htmlFor="password" className="form-label">
                     Password
                   </label>
                   <input
                     type="password"
-                    class="form-control"
+                    className="form-control"
                     name="password"
                     id="password"
                     placeholder="Password"

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import React from "react";
 
-const Header = async() => {
+const Header = async({lang}) => {
     const session = await getSession();
   return (
     <nav className="navbar navbar-expand-lg bg-primary sticky-top ">
@@ -24,7 +24,7 @@ const Header = async() => {
               action={async () => {
                 "use server";
                 await logout();
-                redirect("/");
+                redirect(`${lang}`);
               }}
             >
               <button className="btn btn-success " type="submit">Logout</button>
@@ -35,19 +35,19 @@ const Header = async() => {
 
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle text-success"
+                className="nav-link dropdown-toggle text-success text-capitalize"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Languages
+                {lang}
               </a>
               <ul className="dropdown-menu">
                 {i18n.locales.map((locale, index) => (
                   <li key={index}>
                     <Link className="dropdown-item" href={`/${locale}`}>
-                     <span className={`fi fi-${locale}`}></span> {locale}
+                     <span className={`fi fi-${locale==="en"? "gb":locale}`}></span> {locale}
                     </Link>
                   </li>
                 ))}

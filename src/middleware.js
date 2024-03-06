@@ -43,23 +43,23 @@ export async function middleware(request) {
     return NextResponse.redirect(request.nextUrl);
   }
 
-  const session = await getSession();
-  console.log("session middleware", session);
+  // const session = await getSession();
+  // console.log("session middleware", session);
 
-  const arr = request.nextUrl.pathname.split("/");
+  // const arr = request.nextUrl.pathname.split("/");
 
-  const patnamewithoutlocale = arr.length > 2 ? arr[2] : "";
-  const pathnameLocale = arr.length > 1 ? arr[1] : "";
+  // const patnamewithoutlocale = arr.length > 2 ? arr[2] : "";
+  // const pathnameLocale = arr.length > 1 ? arr[1] : "";
 
-  if (!session && !patnamewithoutlocale.startsWith("sign-in")) {
-    if (pathnameHasLocale) {
-      return Response.redirect(
-        new URL(`/${pathnameLocale}/sign-in`, request.url)
-      );
-    } else {
-      return Response.redirect(new URL(`/sign-in`, request.url));
-    }
-  }
+  // if (!session && !patnamewithoutlocale.startsWith("sign-in")) {
+  //   if (pathnameHasLocale) {
+  //     return Response.redirect(
+  //       new URL(`/${pathnameLocale}/sign-in`, request.url)
+  //     );
+  //   } else {
+  //     return Response.redirect(new URL(`/sign-in`, request.url));
+  //   }
+  // }
 
   // NO USER
   return await updateSession(request);
