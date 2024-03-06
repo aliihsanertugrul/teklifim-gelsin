@@ -1,0 +1,13 @@
+@use "../../../styles/variables" as v;
+
+footer{
+    background-color: v.$color1;
+    color: v.$color3;
+    padding: 40px 0;
+    text-align: center;
+    a{
+        color:v.$color3;
+        text-decoration: underline;
+        font-weight: 700;
+    }
+}
