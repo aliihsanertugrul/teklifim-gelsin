@@ -8,11 +8,12 @@ import {  i18n } from "@/dictionaries/dictionaries";
 export default async function SignUp({ params }) {
 
   return (
-    <div className="container signup-form">
-      <div className="row justify-content-center ">
+    <div className="signup-form">
+      <div className="row justify-content-center align-items-center h-100">
         <div className="col-sm-8 col-md-6 col-lg-5 col-xl-4">
-          <div className="card signup-form">
+          <div className="card signup-card">
             <div className="card-body">
+              <h6 className="fst-italic mb-3 ">Please enter your email and password!</h6>
            <form
                 action={async (formData) => {
                   "use server";
@@ -52,7 +53,7 @@ export default async function SignUp({ params }) {
                   />
                 </div>
 
-                <button className="btn btn-primary " type="submit">
+                <button className="btn btn-outline-primary" type="submit">
                   Login
                 </button>
               </form>

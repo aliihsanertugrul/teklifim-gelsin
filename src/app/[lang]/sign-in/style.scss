@@ -1,10 +1,21 @@
 @use "../../../styles/_variables.scss" as v;
 
 .signup-form {
-  .signup-form {
+  background-image: url("/teklifimgelsin_logo.png");
+  background-size:auto;
+
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  height: 100vh;
+    
+  
+    
+    
+  .signup-card {
     border: none;
     padding: 30px 10px;
     background-color: v.$color3;
+    opacity: 0.9;
     box-shadow: 0px 3px 10px v.$color2;
     form {
       input {
