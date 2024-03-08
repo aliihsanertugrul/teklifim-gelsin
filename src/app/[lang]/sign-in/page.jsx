@@ -1,11 +1,13 @@
 import { redirect } from "next/navigation";
 import { login } from "@/lib/auth";
 import "./style.scss";
-import {  i18n } from "@/dictionaries/dictionaries";
+import {  getDictionary, i18n } from "@/dictionaries/dictionaries";
 
 
 
 export default async function SignUp({ params }) {
+  console.log(params)
+  const dict=await getDictionary(params.lang);
 
   return (
     <div className="signup-form">
@@ -13,7 +15,7 @@ export default async function SignUp({ params }) {
         <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
           <div className="card signup-card">
             <div className="card-body">
-              <h6 className="fst-italic mb-3 ">Please enter your email and password!</h6>
+              <h6 className="fst-italic mb-3 ">{dict.products.loginTitle}</h6>
            <form
                 action={async (formData) => {
                   "use server";
@@ -25,9 +27,9 @@ export default async function SignUp({ params }) {
                   }
                 }}
               >
-                <div class="mb-3">
+                <div className="mb-3">
                   <label htmlFor="email" className="form-label">
-                    Email address
+                  {dict.products.email}
                   </label>
                   <input
                     type="email"
@@ -39,9 +41,9 @@ export default async function SignUp({ params }) {
                   />
                 </div>
 
-                <div class="mb-3">
+                <div className="mb-3">
                   <label htmlFor="password" className="form-label">
-                    Password
+                    {dict.products.password}
                   </label>
                   <input
                     type="password"
@@ -55,7 +57,7 @@ export default async function SignUp({ params }) {
 
                 <div className="btn-container">
                 <button className="btn fw-bold" type="submit">
-                  Login
+                {dict.products.login}
                 </button>
                 </div>
               </form>

@@ -6,6 +6,11 @@
     "cart": "Add to Cart",
     "welcome":"Welcome",
     "logout":"Logout",
-    "copyright":"Copyright by"
+    "copyright":"Copyright by",
+    "loginTitle":"Please enter your email and password!",
+    "email":"Email Adress",
+    "password":"Password",
+    "login":"Login"
+    
   }
 }

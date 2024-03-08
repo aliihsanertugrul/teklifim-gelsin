@@ -6,6 +6,10 @@
     "cart": "Toevoegen aan Winkelwagen",
     "welcome":"Willkommen",
     "logout":"Abmelden",
-    "copyright":"Urheberrecht von"
+    "copyright":"Urheberrecht von",
+    "loginTitle":"Bitte geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein!",
+    "email":"E-Mail-Adresse",
+    "password":"Passwort",
+    "login":"Einloggen"
   }
 }
