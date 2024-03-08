@@ -1,6 +1,11 @@
 {
   "products": {
     "random":"Random",
-    "cart": "Add to Cart"
+    "todayTitle":"Today's Useless Fact;",
+    "randomTitle":"Random Useless Fact;",
+    "cart": "Add to Cart",
+    "welcome":"Welcome",
+    "logout":"Logout",
+    "copyright":"Copyright by"
   }
 }

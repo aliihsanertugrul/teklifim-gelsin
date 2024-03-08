@@ -30,8 +30,7 @@ export async function middleware(request) {
     (locale) => pathname.startsWith(`/${locale}`) || pathname === `/${locale}`
   );
 
-  console.log("pathname", pathname);
-  console.log("pathnameHasLocale", pathnameHasLocale);
+  
 
   // NO LANGUAGE
   if (!pathnameHasLocale) {

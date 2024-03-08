@@ -1,6 +1,11 @@
 {
   "products": {
     "random":"Zufällig",
-    "cart": "Toevoegen aan Winkelwagen"
+    "todayTitle":"Heutige nutzlose Tatsache;",
+    "randomTitle":"Zufällige nutzlose Tatsache;",
+    "cart": "Toevoegen aan Winkelwagen",
+    "welcome":"Willkommen",
+    "logout":"Abmelden",
+    "copyright":"Urheberrecht von"
   }
 }
