@@ -1,0 +1,9 @@
+.container{
+    a{
+        img{
+            @media(max-width:530px){
+                display: none;
+            }
+        }
+    }
+}
