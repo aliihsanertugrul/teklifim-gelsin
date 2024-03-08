@@ -22,7 +22,7 @@ const Header = async ({ lang }) => {
         </Link>
         {session?.user?.name && (
           <div
-            className="nav-link active  text-success p-2 fw-bold "
+            className="nav-link active  text-success p-2 fw-bold user-name"
             aria-current="page"
             href="#"
           >

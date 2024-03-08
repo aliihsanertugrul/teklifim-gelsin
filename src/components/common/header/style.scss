@@ -1,9 +1,7 @@
-.container{
-    a{
-        img{
-            @media(max-width:530px){
-                display: none;
-            }
-        }
+.container {
+  .user-name {
+    @media (max-width: 530px) {
+      display: none;
     }
+  }
 }

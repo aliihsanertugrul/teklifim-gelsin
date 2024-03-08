@@ -12,7 +12,7 @@ export default async function SignUp({ params }) {
   return (
     <div className="signup-form">
       <div className="row justify-content-center align-items-center h-100">
-        <div className="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+        <div className="col-10 col-sm-7 col-md-6 col-lg-5 col-xl-4">
           <div className="card signup-card">
             <div className="card-body">
               <h6 className="fst-italic mb-3 ">{dict.products.loginTitle}</h6>
