@@ -1,18 +1,10 @@
 @use "../../../styles/_variables.scss" as v;
 
 .signup-form {
-  background-image: url("/teklifimgelsin_logo.png");
-  background-size:auto;
-
-  // background-repeat: no-repeat;
-  // background-position: center center;
   height: 100vh;
-    
-  
-    
-    
+
   .signup-card {
-    border: none;
+    border-top: 5px solid v.$color4;
     padding: 30px 10px;
     background-color: v.$color3;
     opacity: 0.9;
@@ -22,8 +14,44 @@
         width: 100%;
         margin-bottom: 10px;
       }
-      button {
+      .btn-container {
         width: 100%;
+        border-radius: 10px;
+        position: relative;
+        padding: 2px;
+        background: linear-gradient(
+          45deg,
+          #ff4593,
+          #ffe713 32%,
+          v.$color4 66%,
+          #077bff
+        );
+
+        
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -20px;
+          right: 0;
+          bottom: 0;
+          background-image: linear-gradient(
+            135deg,
+            #ff4593,
+            #ffe713 33%,
+            #17d7ff 66%,
+            #077bff
+          );
+          opacity: 0.2;
+          z-index: -1;
+          filter: blur(1.5rem);
+        }
+        button {
+          width: 100%;
+          border-radius: 10px;
+          background-color: white;
+        }
       }
     }
   }

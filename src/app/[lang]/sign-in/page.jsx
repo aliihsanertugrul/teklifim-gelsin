@@ -10,7 +10,7 @@ export default async function SignUp({ params }) {
   return (
     <div className="signup-form">
       <div className="row justify-content-center align-items-center h-100">
-        <div className="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+        <div className="col-xs-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
           <div className="card signup-card">
             <div className="card-body">
               <h6 className="fst-italic mb-3 ">Please enter your email and password!</h6>
@@ -53,9 +53,11 @@ export default async function SignUp({ params }) {
                   />
                 </div>
 
-                <button className="btn btn-outline-primary" type="submit">
+                <div className="btn-container">
+                <button className="btn fw-bold" type="submit">
                   Login
                 </button>
+                </div>
               </form>
             </div>
           </div>

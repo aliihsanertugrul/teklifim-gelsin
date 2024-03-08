@@ -24,8 +24,7 @@ if(!session && i18n.locales.some(locale => locale ===params.lang)){
     <div>
       <div>
         <p>Today Response :{todayResponse.text}</p>
-        {/* <h2>Random Fact</h2>
-      <p>{randomResponse.text}</p> */}
+        
       </div>
       <Random text={randomResponse.text} lang={params.lang} />
 
