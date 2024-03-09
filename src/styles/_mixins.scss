@@ -26,21 +26,3 @@
 	gap: $gap;
 	flex-wrap: $fw;
 }
-
-@mixin reset-list($m: 0, $p: 0) {
-	list-style-type: none;
-	margin: $m;
-	padding: $p;
-}
-
-@mixin shadow($type, $val) {
-	#{$type}-shadow: $val;
-}
-
-@mixin fligran($bgColor){
-	content:"";
-	position: absolute;
-	top:0; bottom:0; left:0; right:0;
-	background-color: $bgColor;
-	z-index: 1;
-}

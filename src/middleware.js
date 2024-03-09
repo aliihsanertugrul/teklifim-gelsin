@@ -1,7 +1,7 @@
 import { match } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 import { i18n } from "@/dictionaries/dictionaries";
-import { updateSession, getSession } from "@/lib/auth";
+import { updateSession } from "@/lib/auth";
 
 import { NextResponse } from "next/server";
 
