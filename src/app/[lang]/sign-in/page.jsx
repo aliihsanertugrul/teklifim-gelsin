@@ -1,13 +1,10 @@
 import { redirect } from "next/navigation";
 import { login } from "@/lib/auth";
 import "./style.scss";
-import {  getDictionary, i18n } from "@/dictionaries/dictionaries";
-
-
+import { getDictionary, i18n } from "@/dictionaries/dictionaries";
 
 export default async function SignUp({ params }) {
-  console.log(params)
-  const dict=await getDictionary(params.lang);
+  const dict = await getDictionary(params.lang);
 
   return (
     <div className="signup-form">
@@ -16,20 +13,20 @@ export default async function SignUp({ params }) {
           <div className="card signup-card">
             <div className="card-body">
               <h6 className="fst-italic mb-3 ">{dict.products.loginTitle}</h6>
-           <form
+              <form
                 action={async (formData) => {
                   "use server";
                   await login(formData);
-                  if(i18n.locales.some(locale => locale ===params.lang)){
+                  if (i18n.locales.some((locale) => locale === params.lang)) {
                     redirect(`/${params.lang}`);
-                  }else{
- redirect(`/not-found`);
+                  } else {
+                    redirect(`/not-found`);
                   }
                 }}
               >
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">
-                  {dict.products.email}
+                    {dict.products.email}
                   </label>
                   <input
                     type="email"
@@ -56,9 +53,9 @@ export default async function SignUp({ params }) {
                 </div>
 
                 <div className="btn-container">
-                <button className="btn fw-bold" type="submit">
-                {dict.products.login}
-                </button>
+                  <button className="btn fw-bold" type="submit">
+                    {dict.products.login}
+                  </button>
                 </div>
               </form>
             </div>

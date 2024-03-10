@@ -1,4 +1,5 @@
 @use "../../../styles/_variables.scss" as v;
+@use "../../../styles/mixins.scss" as m;
 
 .signup-form {
   height: 100vh;
@@ -16,7 +17,7 @@
       }
       .btn-container {
         width: 100%;
-        border-radius: 10px;
+        @include m.border-radius(10px);
         position: relative;
         padding: 2px;
         background: linear-gradient(
@@ -49,7 +50,7 @@
         }
         button {
           width: 100%;
-          border-radius: 10px;
+          @include m.border-radius(10px);
           background-color: white;
         }
       }

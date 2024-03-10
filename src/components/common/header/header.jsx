@@ -8,11 +8,13 @@ import "./style.scss";
 
 const Header = async ({ lang }) => {
   const session = await getSession();
+  
   const dict = await getDictionary(lang);
+
   return (
     <nav className="navbar navbar-expand-lg bg-primary sticky-top ">
       <div className="container">
-        <Link className="navbar-brand  text-success rounded" href="/">
+        <Link className="navbar-brand  text-success rounded" href={`/${lang}`}>
           <Image
             src="/teklifimgelsin.png"
             width={160}

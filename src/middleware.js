@@ -30,8 +30,6 @@ export async function middleware(request) {
     (locale) => pathname.startsWith(`/${locale}`) || pathname === `/${locale}`
   );
 
-  
-
   // NO LANGUAGE
   if (!pathnameHasLocale) {
     // Redirect if there is no locale
@@ -41,24 +39,6 @@ export async function middleware(request) {
     // The new URL is now /en-US/products
     return NextResponse.redirect(request.nextUrl);
   }
-
-  // const session = await getSession();
-  // console.log("session middleware", session);
-
-  // const arr = request.nextUrl.pathname.split("/");
-
-  // const patnamewithoutlocale = arr.length > 2 ? arr[2] : "";
-  // const pathnameLocale = arr.length > 1 ? arr[1] : "";
-
-  // if (!session && !patnamewithoutlocale.startsWith("sign-in")) {
-  //   if (pathnameHasLocale) {
-  //     return Response.redirect(
-  //       new URL(`/${pathnameLocale}/sign-in`, request.url)
-  //     );
-  //   } else {
-  //     return Response.redirect(new URL(`/sign-in`, request.url));
-  //   }
-  // }
 
   // NO USER
   return await updateSession(request);
